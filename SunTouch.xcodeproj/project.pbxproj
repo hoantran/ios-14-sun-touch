@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B46B66E19ABEE27001FFBFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B46B66D19ABEE27001FFBFB /* Foundation.framework */; };
+		3B46B67019ABEE27001FFBFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B46B66F19ABEE27001FFBFB /* CoreGraphics.framework */; };
+		3B46B67219ABEE27001FFBFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B46B67119ABEE27001FFBFB /* UIKit.framework */; };
+		3B46B67819ABEE27001FFBFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B46B67619ABEE27001FFBFB /* InfoPlist.strings */; };
+		3B46B67A19ABEE27001FFBFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B46B67919ABEE27001FFBFB /* main.m */; };
+		3B46B67E19ABEE27001FFBFB /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B46B67D19ABEE27001FFBFB /* STAppDelegate.m */; };
+		3B46B68119ABEE27001FFBFB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B46B67F19ABEE27001FFBFB /* Main_iPhone.storyboard */; };
+		3B46B68419ABEE27001FFBFB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B46B68219ABEE27001FFBFB /* Main_iPad.storyboard */; };
+		3B46B68719ABEE27001FFBFB /* STMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B46B68619ABEE27001FFBFB /* STMainViewController.m */; };
+		3B46B68A19ABEE27001FFBFB /* STFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B46B68919ABEE27001FFBFB /* STFlipsideViewController.m */; };
+		3B46B68C19ABEE27001FFBFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B46B68B19ABEE27001FFBFB /* Images.xcassets */; };
+		3B46B69319ABEE27001FFBFB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B46B69219ABEE27001FFBFB /* XCTest.framework */; };
+		3B46B69419ABEE27001FFBFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B46B66D19ABEE27001FFBFB /* Foundation.framework */; };
+		3B46B69519ABEE27001FFBFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B46B67119ABEE27001FFBFB /* UIKit.framework */; };
+		3B46B69D19ABEE27001FFBFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B46B69B19ABEE27001FFBFB /* InfoPlist.strings */; };
+		3B46B69F19ABEE27001FFBFB /* SunTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B46B69E19ABEE27001FFBFB /* SunTouchTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B46B69619ABEE27001FFBFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B46B66219ABEE27001FFBFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B46B66919ABEE27001FFBFB;
+			remoteInfo = SunTouch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B46B66A19ABEE27001FFBFB /* SunTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B46B66D19ABEE27001FFBFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3B46B66F19ABEE27001FFBFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3B46B67119ABEE27001FFBFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3B46B67519ABEE27001FFBFB /* SunTouch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SunTouch-Info.plist"; sourceTree = "<group>"; };
+		3B46B67719ABEE27001FFBFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B46B67919ABEE27001FFBFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B46B67B19ABEE27001FFBFB /* SunTouch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SunTouch-Prefix.pch"; sourceTree = "<group>"; };
+		3B46B67C19ABEE27001FFBFB /* STAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAppDelegate.h; sourceTree = "<group>"; };
+		3B46B67D19ABEE27001FFBFB /* STAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAppDelegate.m; sourceTree = "<group>"; };
+		3B46B68019ABEE27001FFBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		3B46B68319ABEE27001FFBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		3B46B68519ABEE27001FFBFB /* STMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMainViewController.h; sourceTree = "<group>"; };
+		3B46B68619ABEE27001FFBFB /* STMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMainViewController.m; sourceTree = "<group>"; };
+		3B46B68819ABEE27001FFBFB /* STFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STFlipsideViewController.h; sourceTree = "<group>"; };
+		3B46B68919ABEE27001FFBFB /* STFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STFlipsideViewController.m; sourceTree = "<group>"; };
+		3B46B68B19ABEE27001FFBFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3B46B69119ABEE27001FFBFB /* SunTouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunTouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B46B69219ABEE27001FFBFB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3B46B69A19ABEE27001FFBFB /* SunTouchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SunTouchTests-Info.plist"; sourceTree = "<group>"; };
+		3B46B69C19ABEE27001FFBFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B46B69E19ABEE27001FFBFB /* SunTouchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SunTouchTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B46B66719ABEE27001FFBFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B46B67019ABEE27001FFBFB /* CoreGraphics.framework in Frameworks */,
+				3B46B67219ABEE27001FFBFB /* UIKit.framework in Frameworks */,
+				3B46B66E19ABEE27001FFBFB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B46B68E19ABEE27001FFBFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B46B69319ABEE27001FFBFB /* XCTest.framework in Frameworks */,
+				3B46B69519ABEE27001FFBFB /* UIKit.framework in Frameworks */,
+				3B46B69419ABEE27001FFBFB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B46B66119ABEE27001FFBFB = {
+			isa = PBXGroup;
+			children = (
+				3B46B67319ABEE27001FFBFB /* SunTouch */,
+				3B46B69819ABEE27001FFBFB /* SunTouchTests */,
+				3B46B66C19ABEE27001FFBFB /* Frameworks */,
+				3B46B66B19ABEE27001FFBFB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B46B66B19ABEE27001FFBFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B46B66A19ABEE27001FFBFB /* SunTouch.app */,
+				3B46B69119ABEE27001FFBFB /* SunTouchTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B46B66C19ABEE27001FFBFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B46B66D19ABEE27001FFBFB /* Foundation.framework */,
+				3B46B66F19ABEE27001FFBFB /* CoreGraphics.framework */,
+				3B46B67119ABEE27001FFBFB /* UIKit.framework */,
+				3B46B69219ABEE27001FFBFB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B46B67319ABEE27001FFBFB /* SunTouch */ = {
+			isa = PBXGroup;
+			children = (
+				3B46B67C19ABEE27001FFBFB /* STAppDelegate.h */,
+				3B46B67D19ABEE27001FFBFB /* STAppDelegate.m */,
+				3B46B67F19ABEE27001FFBFB /* Main_iPhone.storyboard */,
+				3B46B68219ABEE27001FFBFB /* Main_iPad.storyboard */,
+				3B46B68519ABEE27001FFBFB /* STMainViewController.h */,
+				3B46B68619ABEE27001FFBFB /* STMainViewController.m */,
+				3B46B68819ABEE27001FFBFB /* STFlipsideViewController.h */,
+				3B46B68919ABEE27001FFBFB /* STFlipsideViewController.m */,
+				3B46B68B19ABEE27001FFBFB /* Images.xcassets */,
+				3B46B67419ABEE27001FFBFB /* Supporting Files */,
+			);
+			path = SunTouch;
+			sourceTree = "<group>";
+		};
+		3B46B67419ABEE27001FFBFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B46B67519ABEE27001FFBFB /* SunTouch-Info.plist */,
+				3B46B67619ABEE27001FFBFB /* InfoPlist.strings */,
+				3B46B67919ABEE27001FFBFB /* main.m */,
+				3B46B67B19ABEE27001FFBFB /* SunTouch-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B46B69819ABEE27001FFBFB /* SunTouchTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B46B69E19ABEE27001FFBFB /* SunTouchTests.m */,
+				3B46B69919ABEE27001FFBFB /* Supporting Files */,
+			);
+			path = SunTouchTests;
+			sourceTree = "<group>";
+		};
+		3B46B69919ABEE27001FFBFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B46B69A19ABEE27001FFBFB /* SunTouchTests-Info.plist */,
+				3B46B69B19ABEE27001FFBFB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B46B66919ABEE27001FFBFB /* SunTouch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B46B6A219ABEE27001FFBFB /* Build configuration list for PBXNativeTarget "SunTouch" */;
+			buildPhases = (
+				3B46B66619ABEE27001FFBFB /* Sources */,
+				3B46B66719ABEE27001FFBFB /* Frameworks */,
+				3B46B66819ABEE27001FFBFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SunTouch;
+			productName = SunTouch;
+			productReference = 3B46B66A19ABEE27001FFBFB /* SunTouch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B46B69019ABEE27001FFBFB /* SunTouchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B46B6A519ABEE27001FFBFB /* Build configuration list for PBXNativeTarget "SunTouchTests" */;
+			buildPhases = (
+				3B46B68D19ABEE27001FFBFB /* Sources */,
+				3B46B68E19ABEE27001FFBFB /* Frameworks */,
+				3B46B68F19ABEE27001FFBFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B46B69719ABEE27001FFBFB /* PBXTargetDependency */,
+			);
+			name = SunTouchTests;
+			productName = SunTouchTests;
+			productReference = 3B46B69119ABEE27001FFBFB /* SunTouchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B46B66219ABEE27001FFBFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ST;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Pego Consulting";
+				TargetAttributes = {
+					3B46B69019ABEE27001FFBFB = {
+						TestTargetID = 3B46B66919ABEE27001FFBFB;
+					};
+				};
+			};
+			buildConfigurationList = 3B46B66519ABEE27001FFBFB /* Build configuration list for PBXProject "SunTouch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B46B66119ABEE27001FFBFB;
+			productRefGroup = 3B46B66B19ABEE27001FFBFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B46B66919ABEE27001FFBFB /* SunTouch */,
+				3B46B69019ABEE27001FFBFB /* SunTouchTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B46B66819ABEE27001FFBFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B46B68419ABEE27001FFBFB /* Main_iPad.storyboard in Resources */,
+				3B46B68C19ABEE27001FFBFB /* Images.xcassets in Resources */,
+				3B46B68119ABEE27001FFBFB /* Main_iPhone.storyboard in Resources */,
+				3B46B67819ABEE27001FFBFB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B46B68F19ABEE27001FFBFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B46B69D19ABEE27001FFBFB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B46B66619ABEE27001FFBFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B46B67A19ABEE27001FFBFB /* main.m in Sources */,
+				3B46B68719ABEE27001FFBFB /* STMainViewController.m in Sources */,
+				3B46B67E19ABEE27001FFBFB /* STAppDelegate.m in Sources */,
+				3B46B68A19ABEE27001FFBFB /* STFlipsideViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B46B68D19ABEE27001FFBFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B46B69F19ABEE27001FFBFB /* SunTouchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B46B69719ABEE27001FFBFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B46B66919ABEE27001FFBFB /* SunTouch */;
+			targetProxy = 3B46B69619ABEE27001FFBFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3B46B67619ABEE27001FFBFB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B46B67719ABEE27001FFBFB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3B46B67F19ABEE27001FFBFB /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B46B68019ABEE27001FFBFB /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		3B46B68219ABEE27001FFBFB /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B46B68319ABEE27001FFBFB /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		3B46B69B19ABEE27001FFBFB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B46B69C19ABEE27001FFBFB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B46B6A019ABEE27001FFBFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B46B6A119ABEE27001FFBFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B46B6A319ABEE27001FFBFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SunTouch/SunTouch-Prefix.pch";
+				INFOPLIST_FILE = "SunTouch/SunTouch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3B46B6A419ABEE27001FFBFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SunTouch/SunTouch-Prefix.pch";
+				INFOPLIST_FILE = "SunTouch/SunTouch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3B46B6A619ABEE27001FFBFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SunTouch.app/SunTouch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SunTouch/SunTouch-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SunTouchTests/SunTouchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3B46B6A719ABEE27001FFBFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SunTouch.app/SunTouch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SunTouch/SunTouch-Prefix.pch";
+				INFOPLIST_FILE = "SunTouchTests/SunTouchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B46B66519ABEE27001FFBFB /* Build configuration list for PBXProject "SunTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B46B6A019ABEE27001FFBFB /* Debug */,
+				3B46B6A119ABEE27001FFBFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B46B6A219ABEE27001FFBFB /* Build configuration list for PBXNativeTarget "SunTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B46B6A319ABEE27001FFBFB /* Debug */,
+				3B46B6A419ABEE27001FFBFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3B46B6A519ABEE27001FFBFB /* Build configuration list for PBXNativeTarget "SunTouchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B46B6A619ABEE27001FFBFB /* Debug */,
+				3B46B6A719ABEE27001FFBFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B46B66219ABEE27001FFBFB /* Project object */;
+}
