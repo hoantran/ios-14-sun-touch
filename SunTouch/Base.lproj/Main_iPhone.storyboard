@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Billboard-iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="6tl-5D-wbd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Billboard-iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="kit-BG-jGR">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -34,33 +34,33 @@
                                     <segue destination="kIf-nA-PKG" kind="modal" identifier="showAlternate" modalTransitionStyle="flipHorizontal" id="ZEO-Qe-X3j"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-Re-S4P">
-                                <rect key="frame" x="91" y="310" width="138" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYF-6e-psF">
+                                <rect key="frame" x="90" y="325" width="140" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Single Player">
-                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQQ-CU-P37">
-                                <rect key="frame" x="81" y="353" width="158" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi7-Gb-WWF">
+                                <rect key="frame" x="90" y="354" width="140" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Double Player">
-                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="jqg-sy-dxO" secondAttribute="trailing" constant="20" symbolic="YES" id="1ym-A3-aKq"/>
-                            <constraint firstAttribute="centerX" secondItem="nQQ-CU-P37" secondAttribute="centerX" id="LLR-dk-HBG"/>
-                            <constraint firstAttribute="trailing" secondItem="6tl-5D-wbd" secondAttribute="trailing" id="MLO-zw-let"/>
-                            <constraint firstItem="c4s-Xn-x5B" firstAttribute="top" secondItem="6tl-5D-wbd" secondAttribute="bottom" id="MqK-UK-6L9"/>
-                            <constraint firstAttribute="centerX" secondItem="hrf-Re-S4P" secondAttribute="centerX" id="Rkt-ht-NK8"/>
+                            <constraint firstItem="Zi7-Gb-WWF" firstAttribute="top" secondItem="aYF-6e-psF" secondAttribute="bottom" constant="-1" id="CEs-Co-JDb"/>
+                            <constraint firstItem="kit-BG-jGR" firstAttribute="top" secondItem="bfD-tQ-IfD" secondAttribute="top" id="MBP-AD-52w"/>
+                            <constraint firstAttribute="trailing" secondItem="kit-BG-jGR" secondAttribute="trailing" id="RrK-x6-BG5"/>
                             <constraint firstAttribute="bottom" secondItem="jqg-sy-dxO" secondAttribute="bottom" constant="20" symbolic="YES" id="Uf2-YL-3zF"/>
-                            <constraint firstItem="6tl-5D-wbd" firstAttribute="leading" secondItem="l9E-07-oys" secondAttribute="leading" id="YbP-I6-1qr"/>
-                            <constraint firstItem="nQQ-CU-P37" firstAttribute="top" secondItem="hrf-Re-S4P" secondAttribute="bottom" constant="13" id="lHm-St-WJ1"/>
-                            <constraint firstItem="6tl-5D-wbd" firstAttribute="top" secondItem="bfD-tQ-IfD" secondAttribute="top" id="sIz-W6-Jpg"/>
-                            <constraint firstItem="c4s-Xn-x5B" firstAttribute="top" secondItem="nQQ-CU-P37" secondAttribute="bottom" constant="185" id="zOn-0E-Y1a"/>
+                            <constraint firstAttribute="centerX" secondItem="aYF-6e-psF" secondAttribute="centerX" id="glh-kR-die"/>
+                            <constraint firstItem="c4s-Xn-x5B" firstAttribute="top" secondItem="Zi7-Gb-WWF" secondAttribute="bottom" constant="150" id="i9k-cc-AXm"/>
+                            <constraint firstItem="kit-BG-jGR" firstAttribute="leading" secondItem="l9E-07-oys" secondAttribute="leading" id="pfV-qv-vcR"/>
+                            <constraint firstItem="c4s-Xn-x5B" firstAttribute="top" secondItem="kit-BG-jGR" secondAttribute="bottom" id="rUD-eY-Tua"/>
+                            <constraint firstAttribute="centerX" secondItem="Zi7-Gb-WWF" secondAttribute="centerX" id="vx8-uO-INU"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -81,7 +81,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="hED-2o-FLw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Starfield" translatesAutoresizingMaskIntoConstraints="NO" id="Wr3-tM-QG5">
+                                <rect key="frame" x="33" y="44" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="hED-2o-FLw">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="caU-JJ-JLf">
@@ -93,16 +97,12 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Starfield" translatesAutoresizingMaskIntoConstraints="NO" id="K2h-7d-Q8U">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Strike" translatesAutoresizingMaskIntoConstraints="NO" id="gQb-EL-1eZ">
+                                <rect key="frame" x="33" y="61" width="110" height="107"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Strike" translatesAutoresizingMaskIntoConstraints="NO" id="VI1-HO-R7C">
-                                <rect key="frame" x="33" y="60" width="170" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MZz-Zd-Kvi">
-                                <rect key="frame" x="139" y="97" width="143" height="101"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nMM-4I-yLG">
+                                <rect key="frame" x="76" y="107" width="114" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -110,12 +110,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SunHot" translatesAutoresizingMaskIntoConstraints="NO" id="Qah-ba-PVi">
-                                <rect key="frame" x="-18" y="194" width="170" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SunHot" translatesAutoresizingMaskIntoConstraints="NO" id="vKm-qV-ZIv">
+                                <rect key="frame" x="33" y="191" width="110" height="107"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OLf-o6-vXi">
-                                <rect key="frame" x="60" y="226" width="143" height="101"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DeR-Yt-Z54">
+                                <rect key="frame" x="76" y="237" width="114" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -123,12 +123,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SunCold" translatesAutoresizingMaskIntoConstraints="NO" id="hMD-3K-0QW">
-                                <rect key="frame" x="125" y="321" width="170" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SunCold" translatesAutoresizingMaskIntoConstraints="NO" id="WIe-mI-fii">
+                                <rect key="frame" x="33" y="326" width="110" height="107"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p8q-uB-znt">
-                                <rect key="frame" x="94" y="362" width="143" height="101"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ieF-g9-04k">
+                                <rect key="frame" x="76" y="372" width="114" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -139,13 +139,15 @@
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="K2h-7d-Q8U" firstAttribute="leading" secondItem="tg4-aq-CMy" secondAttribute="leading" id="Mnq-hg-crT"/>
-                            <constraint firstItem="K2h-7d-Q8U" firstAttribute="top" secondItem="rBX-Xh-dAM" secondAttribute="bottom" constant="24" id="QBp-7z-eCQ"/>
-                            <constraint firstItem="mPd-kI-uoc" firstAttribute="top" secondItem="K2h-7d-Q8U" secondAttribute="bottom" id="f71-LF-TU3"/>
-                            <constraint firstAttribute="trailing" secondItem="K2h-7d-Q8U" secondAttribute="trailing" id="mGd-KV-qBm"/>
+                            <constraint firstItem="hED-2o-FLw" firstAttribute="leading" secondItem="tg4-aq-CMy" secondAttribute="leading" id="4QI-iY-IyT"/>
+                            <constraint firstItem="hED-2o-FLw" firstAttribute="top" secondItem="tg4-aq-CMy" secondAttribute="top" id="4lF-kP-6dV"/>
+                            <constraint firstItem="Wr3-tM-QG5" firstAttribute="leading" secondItem="tg4-aq-CMy" secondAttribute="leading" id="Ixr-U7-tPs"/>
+                            <constraint firstItem="hED-2o-FLw" firstAttribute="trailing" secondItem="tg4-aq-CMy" secondAttribute="trailing" id="cVE-3m-sGp"/>
+                            <constraint firstItem="Wr3-tM-QG5" firstAttribute="top" secondItem="rBX-Xh-dAM" secondAttribute="bottom" constant="24" id="mGl-DV-MOF"/>
+                            <constraint firstItem="mPd-kI-uoc" firstAttribute="top" secondItem="Wr3-tM-QG5" secondAttribute="bottom" id="wxm-E3-0oJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Wr3-tM-QG5" secondAttribute="trailing" id="z44-Uf-l7M"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="325" height="500"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlJ-1o-FvB" sceneMemberID="firstResponder"/>
             </objects>
