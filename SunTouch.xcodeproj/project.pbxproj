@@ -7,155 +7,195 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B46B6B519AD643D001FFBFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B46B6B419AD643D001FFBFB /* Foundation.framework */; };
-		3B46B6B719AD643D001FFBFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B46B6B619AD643D001FFBFB /* CoreGraphics.framework */; };
-		3B46B6B919AD643D001FFBFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B46B6B819AD643D001FFBFB /* UIKit.framework */; };
-		3B46B6BF19AD643D001FFBFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B46B6BD19AD643D001FFBFB /* InfoPlist.strings */; };
-		3B46B6C119AD643D001FFBFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B46B6C019AD643D001FFBFB /* main.m */; };
-		3B46B6C519AD643D001FFBFB /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B46B6C419AD643D001FFBFB /* STAppDelegate.m */; };
-		3B46B6C819AD643D001FFBFB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B46B6C619AD643D001FFBFB /* Main_iPhone.storyboard */; };
-		3B46B6CB19AD643D001FFBFB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B46B6C919AD643D001FFBFB /* Main_iPad.storyboard */; };
-		3B46B6CE19AD643D001FFBFB /* STMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B46B6CD19AD643D001FFBFB /* STMainViewController.m */; };
-		3B46B6D119AD643D001FFBFB /* STFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B46B6D019AD643D001FFBFB /* STFlipsideViewController.m */; };
-		3B46B6D319AD643D001FFBFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B46B6D219AD643D001FFBFB /* Images.xcassets */; };
-		3B46B6DA19AD643D001FFBFB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B46B6D919AD643D001FFBFB /* XCTest.framework */; };
-		3B46B6DB19AD643D001FFBFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B46B6B419AD643D001FFBFB /* Foundation.framework */; };
-		3B46B6DC19AD643D001FFBFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B46B6B819AD643D001FFBFB /* UIKit.framework */; };
-		3B46B6E419AD643D001FFBFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B46B6E219AD643D001FFBFB /* InfoPlist.strings */; };
-		3B46B6E619AD643D001FFBFB /* SunTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B46B6E519AD643D001FFBFB /* SunTouchTests.m */; };
+		1ACA686B18232EFC00A247C5 /* STGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA686918232EFC00A247C5 /* STGameViewController.m */; };
+		1ACA686C18232EFC00A247C5 /* STGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA686A18232EFC00A247C5 /* STGameViewController.xib */; };
+		1ACA686F18232F0B00A247C5 /* STGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA686E18232F0B00A247C5 /* STGameView.m */; };
+		1ACA687418232F1900A247C5 /* STStrike.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA687118232F1900A247C5 /* STStrike.m */; };
+		1ACA687518232F1900A247C5 /* STSun.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA687318232F1900A247C5 /* STSun.m */; };
+		1ACA687818232F2000A247C5 /* STGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA687718232F2000A247C5 /* STGame.m */; };
+		1ACDF3841822D11E00B1C381 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACDF3831822D11E00B1C381 /* Foundation.framework */; };
+		1ACDF3861822D11E00B1C381 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACDF3851822D11E00B1C381 /* CoreGraphics.framework */; };
+		1ACDF3881822D11E00B1C381 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACDF3871822D11E00B1C381 /* UIKit.framework */; };
+		1ACDF38E1822D11E00B1C381 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1ACDF38C1822D11E00B1C381 /* InfoPlist.strings */; };
+		1ACDF3901822D11E00B1C381 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACDF38F1822D11E00B1C381 /* main.m */; };
+		1ACDF3941822D11E00B1C381 /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACDF3931822D11E00B1C381 /* STAppDelegate.m */; };
+		1ACDF3971822D11E00B1C381 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ACDF3951822D11E00B1C381 /* Main_iPhone.storyboard */; };
+		1ACDF39A1822D11E00B1C381 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ACDF3981822D11E00B1C381 /* Main_iPad.storyboard */; };
+		1ACDF39D1822D11E00B1C381 /* STMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACDF39C1822D11E00B1C381 /* STMainViewController.m */; };
+		1ACDF3A01822D11E00B1C381 /* STFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACDF39F1822D11E00B1C381 /* STFlipsideViewController.m */; };
+		1ACDF3A21822D11E00B1C381 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ACDF3A11822D11E00B1C381 /* Images.xcassets */; };
+		1ACDF3A91822D11E00B1C381 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACDF3A81822D11E00B1C381 /* XCTest.framework */; };
+		1ACDF3AA1822D11E00B1C381 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACDF3831822D11E00B1C381 /* Foundation.framework */; };
+		1ACDF3AB1822D11E00B1C381 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACDF3871822D11E00B1C381 /* UIKit.framework */; };
+		1ACDF3B31822D11E00B1C381 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1ACDF3B11822D11E00B1C381 /* InfoPlist.strings */; };
+		1ACDF3B51822D11E00B1C381 /* SunTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACDF3B41822D11E00B1C381 /* SunTouchTests.m */; };
+		3B46B6F019ADB60D001FFBFB /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B46B6EF19ADB60D001FFBFB /* GameKit.framework */; };
+		3B46B6F519B000F1001FFBFB /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3B46B6F419B000F1001FFBFB /* pew-pew-lei.caf */; };
+		3B46B6F719B0038C001FFBFB /* explosion-02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3B46B6F619B0038C001FFBFB /* explosion-02.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B46B6DD19AD643D001FFBFB /* PBXContainerItemProxy */ = {
+		1ACDF3AC1822D11E00B1C381 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3B46B6A919AD643D001FFBFB /* Project object */;
+			containerPortal = 1ACDF3781822D11E00B1C381 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3B46B6B019AD643D001FFBFB;
+			remoteGlobalIDString = 1ACDF37F1822D11E00B1C381;
 			remoteInfo = SunTouch;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B46B6B119AD643D001FFBFB /* SunTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B46B6B419AD643D001FFBFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3B46B6B619AD643D001FFBFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3B46B6B819AD643D001FFBFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		3B46B6BC19AD643D001FFBFB /* SunTouch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SunTouch-Info.plist"; sourceTree = "<group>"; };
-		3B46B6BE19AD643D001FFBFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3B46B6C019AD643D001FFBFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3B46B6C219AD643D001FFBFB /* SunTouch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SunTouch-Prefix.pch"; sourceTree = "<group>"; };
-		3B46B6C319AD643D001FFBFB /* STAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAppDelegate.h; sourceTree = "<group>"; };
-		3B46B6C419AD643D001FFBFB /* STAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAppDelegate.m; sourceTree = "<group>"; };
-		3B46B6C719AD643D001FFBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		3B46B6CA19AD643D001FFBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		3B46B6CC19AD643D001FFBFB /* STMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMainViewController.h; sourceTree = "<group>"; };
-		3B46B6CD19AD643D001FFBFB /* STMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMainViewController.m; sourceTree = "<group>"; };
-		3B46B6CF19AD643D001FFBFB /* STFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STFlipsideViewController.h; sourceTree = "<group>"; };
-		3B46B6D019AD643D001FFBFB /* STFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STFlipsideViewController.m; sourceTree = "<group>"; };
-		3B46B6D219AD643D001FFBFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3B46B6D819AD643D001FFBFB /* SunTouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunTouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B46B6D919AD643D001FFBFB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3B46B6E119AD643D001FFBFB /* SunTouchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SunTouchTests-Info.plist"; sourceTree = "<group>"; };
-		3B46B6E319AD643D001FFBFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3B46B6E519AD643D001FFBFB /* SunTouchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SunTouchTests.m; sourceTree = "<group>"; };
+		1ACA686718232EEF00A247C5 /* STGameDefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STGameDefs.h; sourceTree = "<group>"; };
+		1ACA686818232EFC00A247C5 /* STGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STGameViewController.h; sourceTree = "<group>"; };
+		1ACA686918232EFC00A247C5 /* STGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STGameViewController.m; sourceTree = "<group>"; };
+		1ACA686A18232EFC00A247C5 /* STGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STGameViewController.xib; sourceTree = "<group>"; };
+		1ACA686D18232F0B00A247C5 /* STGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STGameView.h; sourceTree = "<group>"; };
+		1ACA686E18232F0B00A247C5 /* STGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STGameView.m; sourceTree = "<group>"; };
+		1ACA687018232F1900A247C5 /* STStrike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STStrike.h; sourceTree = "<group>"; };
+		1ACA687118232F1900A247C5 /* STStrike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STStrike.m; sourceTree = "<group>"; };
+		1ACA687218232F1900A247C5 /* STSun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSun.h; sourceTree = "<group>"; };
+		1ACA687318232F1900A247C5 /* STSun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSun.m; sourceTree = "<group>"; };
+		1ACA687618232F2000A247C5 /* STGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STGame.h; sourceTree = "<group>"; };
+		1ACA687718232F2000A247C5 /* STGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STGame.m; sourceTree = "<group>"; };
+		1ACDF3801822D11E00B1C381 /* SunTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ACDF3831822D11E00B1C381 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1ACDF3851822D11E00B1C381 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1ACDF3871822D11E00B1C381 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1ACDF38B1822D11E00B1C381 /* SunTouch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SunTouch-Info.plist"; sourceTree = "<group>"; };
+		1ACDF38D1822D11E00B1C381 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1ACDF38F1822D11E00B1C381 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1ACDF3911822D11E00B1C381 /* SunTouch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SunTouch-Prefix.pch"; sourceTree = "<group>"; };
+		1ACDF3921822D11E00B1C381 /* STAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAppDelegate.h; sourceTree = "<group>"; };
+		1ACDF3931822D11E00B1C381 /* STAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAppDelegate.m; sourceTree = "<group>"; };
+		1ACDF3961822D11E00B1C381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		1ACDF3991822D11E00B1C381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		1ACDF39B1822D11E00B1C381 /* STMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMainViewController.h; sourceTree = "<group>"; };
+		1ACDF39C1822D11E00B1C381 /* STMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMainViewController.m; sourceTree = "<group>"; };
+		1ACDF39E1822D11E00B1C381 /* STFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STFlipsideViewController.h; sourceTree = "<group>"; };
+		1ACDF39F1822D11E00B1C381 /* STFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STFlipsideViewController.m; sourceTree = "<group>"; };
+		1ACDF3A11822D11E00B1C381 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1ACDF3A71822D11E00B1C381 /* SunTouchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunTouchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ACDF3A81822D11E00B1C381 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1ACDF3B01822D11E00B1C381 /* SunTouchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SunTouchTests-Info.plist"; sourceTree = "<group>"; };
+		1ACDF3B21822D11E00B1C381 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1ACDF3B41822D11E00B1C381 /* SunTouchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SunTouchTests.m; sourceTree = "<group>"; };
+		3B46B6EF19ADB60D001FFBFB /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		3B46B6F419B000F1001FFBFB /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pew-pew-lei.caf"; path = "rsc/pew-pew-lei.caf"; sourceTree = "<group>"; };
+		3B46B6F619B0038C001FFBFB /* explosion-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "explosion-02.wav"; path = "rsc/explosion-02.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3B46B6AE19AD643D001FFBFB /* Frameworks */ = {
+		1ACDF37D1822D11E00B1C381 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B46B6B719AD643D001FFBFB /* CoreGraphics.framework in Frameworks */,
-				3B46B6B919AD643D001FFBFB /* UIKit.framework in Frameworks */,
-				3B46B6B519AD643D001FFBFB /* Foundation.framework in Frameworks */,
+				1ACDF3861822D11E00B1C381 /* CoreGraphics.framework in Frameworks */,
+				1ACDF3881822D11E00B1C381 /* UIKit.framework in Frameworks */,
+				1ACDF3841822D11E00B1C381 /* Foundation.framework in Frameworks */,
+				3B46B6F019ADB60D001FFBFB /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B46B6D519AD643D001FFBFB /* Frameworks */ = {
+		1ACDF3A41822D11E00B1C381 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B46B6DA19AD643D001FFBFB /* XCTest.framework in Frameworks */,
-				3B46B6DC19AD643D001FFBFB /* UIKit.framework in Frameworks */,
-				3B46B6DB19AD643D001FFBFB /* Foundation.framework in Frameworks */,
+				1ACDF3A91822D11E00B1C381 /* XCTest.framework in Frameworks */,
+				1ACDF3AB1822D11E00B1C381 /* UIKit.framework in Frameworks */,
+				1ACDF3AA1822D11E00B1C381 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B46B6A819AD643D001FFBFB = {
+		1ACDF3771822D11E00B1C381 = {
 			isa = PBXGroup;
 			children = (
-				3B46B6BA19AD643D001FFBFB /* SunTouch */,
-				3B46B6DF19AD643D001FFBFB /* SunTouchTests */,
-				3B46B6B319AD643D001FFBFB /* Frameworks */,
-				3B46B6B219AD643D001FFBFB /* Products */,
+				1ACDF3891822D11E00B1C381 /* SunTouch */,
+				1ACDF3AE1822D11E00B1C381 /* SunTouchTests */,
+				1ACDF3821822D11E00B1C381 /* Frameworks */,
+				1ACDF3811822D11E00B1C381 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3B46B6B219AD643D001FFBFB /* Products */ = {
+		1ACDF3811822D11E00B1C381 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B46B6B119AD643D001FFBFB /* SunTouch.app */,
-				3B46B6D819AD643D001FFBFB /* SunTouchTests.xctest */,
+				1ACDF3801822D11E00B1C381 /* SunTouch.app */,
+				1ACDF3A71822D11E00B1C381 /* SunTouchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3B46B6B319AD643D001FFBFB /* Frameworks */ = {
+		1ACDF3821822D11E00B1C381 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3B46B6B419AD643D001FFBFB /* Foundation.framework */,
-				3B46B6B619AD643D001FFBFB /* CoreGraphics.framework */,
-				3B46B6B819AD643D001FFBFB /* UIKit.framework */,
-				3B46B6D919AD643D001FFBFB /* XCTest.framework */,
+				3B46B6EF19ADB60D001FFBFB /* GameKit.framework */,
+				1ACDF3831822D11E00B1C381 /* Foundation.framework */,
+				1ACDF3851822D11E00B1C381 /* CoreGraphics.framework */,
+				1ACDF3871822D11E00B1C381 /* UIKit.framework */,
+				1ACDF3A81822D11E00B1C381 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3B46B6BA19AD643D001FFBFB /* SunTouch */ = {
+		1ACDF3891822D11E00B1C381 /* SunTouch */ = {
 			isa = PBXGroup;
 			children = (
-				3B46B6C319AD643D001FFBFB /* STAppDelegate.h */,
-				3B46B6C419AD643D001FFBFB /* STAppDelegate.m */,
-				3B46B6C619AD643D001FFBFB /* Main_iPhone.storyboard */,
-				3B46B6C919AD643D001FFBFB /* Main_iPad.storyboard */,
-				3B46B6CC19AD643D001FFBFB /* STMainViewController.h */,
-				3B46B6CD19AD643D001FFBFB /* STMainViewController.m */,
-				3B46B6CF19AD643D001FFBFB /* STFlipsideViewController.h */,
-				3B46B6D019AD643D001FFBFB /* STFlipsideViewController.m */,
-				3B46B6D219AD643D001FFBFB /* Images.xcassets */,
-				3B46B6BB19AD643D001FFBFB /* Supporting Files */,
+				3B46B6F619B0038C001FFBFB /* explosion-02.wav */,
+				3B46B6F419B000F1001FFBFB /* pew-pew-lei.caf */,
+				1ACA686718232EEF00A247C5 /* STGameDefs.h */,
+				1ACDF3921822D11E00B1C381 /* STAppDelegate.h */,
+				1ACDF3931822D11E00B1C381 /* STAppDelegate.m */,
+				1ACDF3951822D11E00B1C381 /* Main_iPhone.storyboard */,
+				1ACDF3981822D11E00B1C381 /* Main_iPad.storyboard */,
+				1ACDF39B1822D11E00B1C381 /* STMainViewController.h */,
+				1ACDF39C1822D11E00B1C381 /* STMainViewController.m */,
+				1ACDF39E1822D11E00B1C381 /* STFlipsideViewController.h */,
+				1ACDF39F1822D11E00B1C381 /* STFlipsideViewController.m */,
+				1ACA686818232EFC00A247C5 /* STGameViewController.h */,
+				1ACA686918232EFC00A247C5 /* STGameViewController.m */,
+				1ACA686A18232EFC00A247C5 /* STGameViewController.xib */,
+				1ACA686D18232F0B00A247C5 /* STGameView.h */,
+				1ACA686E18232F0B00A247C5 /* STGameView.m */,
+				1ACA687618232F2000A247C5 /* STGame.h */,
+				1ACA687718232F2000A247C5 /* STGame.m */,
+				1ACA687018232F1900A247C5 /* STStrike.h */,
+				1ACA687118232F1900A247C5 /* STStrike.m */,
+				1ACA687218232F1900A247C5 /* STSun.h */,
+				1ACA687318232F1900A247C5 /* STSun.m */,
+				1ACDF3A11822D11E00B1C381 /* Images.xcassets */,
+				1ACDF38A1822D11E00B1C381 /* Supporting Files */,
 			);
 			path = SunTouch;
 			sourceTree = "<group>";
 		};
-		3B46B6BB19AD643D001FFBFB /* Supporting Files */ = {
+		1ACDF38A1822D11E00B1C381 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3B46B6BC19AD643D001FFBFB /* SunTouch-Info.plist */,
-				3B46B6BD19AD643D001FFBFB /* InfoPlist.strings */,
-				3B46B6C019AD643D001FFBFB /* main.m */,
-				3B46B6C219AD643D001FFBFB /* SunTouch-Prefix.pch */,
+				1ACDF38B1822D11E00B1C381 /* SunTouch-Info.plist */,
+				1ACDF38C1822D11E00B1C381 /* InfoPlist.strings */,
+				1ACDF38F1822D11E00B1C381 /* main.m */,
+				1ACDF3911822D11E00B1C381 /* SunTouch-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3B46B6DF19AD643D001FFBFB /* SunTouchTests */ = {
+		1ACDF3AE1822D11E00B1C381 /* SunTouchTests */ = {
 			isa = PBXGroup;
 			children = (
-				3B46B6E519AD643D001FFBFB /* SunTouchTests.m */,
-				3B46B6E019AD643D001FFBFB /* Supporting Files */,
+				1ACDF3B41822D11E00B1C381 /* SunTouchTests.m */,
+				1ACDF3AF1822D11E00B1C381 /* Supporting Files */,
 			);
 			path = SunTouchTests;
 			sourceTree = "<group>";
 		};
-		3B46B6E019AD643D001FFBFB /* Supporting Files */ = {
+		1ACDF3AF1822D11E00B1C381 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3B46B6E119AD643D001FFBFB /* SunTouchTests-Info.plist */,
-				3B46B6E219AD643D001FFBFB /* InfoPlist.strings */,
+				1ACDF3B01822D11E00B1C381 /* SunTouchTests-Info.plist */,
+				1ACDF3B11822D11E00B1C381 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -163,13 +203,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3B46B6B019AD643D001FFBFB /* SunTouch */ = {
+		1ACDF37F1822D11E00B1C381 /* SunTouch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B46B6E919AD643D001FFBFB /* Build configuration list for PBXNativeTarget "SunTouch" */;
+			buildConfigurationList = 1ACDF3B81822D11E00B1C381 /* Build configuration list for PBXNativeTarget "SunTouch" */;
 			buildPhases = (
-				3B46B6AD19AD643D001FFBFB /* Sources */,
-				3B46B6AE19AD643D001FFBFB /* Frameworks */,
-				3B46B6AF19AD643D001FFBFB /* Resources */,
+				1ACDF37C1822D11E00B1C381 /* Sources */,
+				1ACDF37D1822D11E00B1C381 /* Frameworks */,
+				1ACDF37E1822D11E00B1C381 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -177,43 +217,51 @@
 			);
 			name = SunTouch;
 			productName = SunTouch;
-			productReference = 3B46B6B119AD643D001FFBFB /* SunTouch.app */;
+			productReference = 1ACDF3801822D11E00B1C381 /* SunTouch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3B46B6D719AD643D001FFBFB /* SunTouchTests */ = {
+		1ACDF3A61822D11E00B1C381 /* SunTouchTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B46B6EC19AD643D001FFBFB /* Build configuration list for PBXNativeTarget "SunTouchTests" */;
+			buildConfigurationList = 1ACDF3BB1822D11E00B1C381 /* Build configuration list for PBXNativeTarget "SunTouchTests" */;
 			buildPhases = (
-				3B46B6D419AD643D001FFBFB /* Sources */,
-				3B46B6D519AD643D001FFBFB /* Frameworks */,
-				3B46B6D619AD643D001FFBFB /* Resources */,
+				1ACDF3A31822D11E00B1C381 /* Sources */,
+				1ACDF3A41822D11E00B1C381 /* Frameworks */,
+				1ACDF3A51822D11E00B1C381 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3B46B6DE19AD643D001FFBFB /* PBXTargetDependency */,
+				1ACDF3AD1822D11E00B1C381 /* PBXTargetDependency */,
 			);
 			name = SunTouchTests;
 			productName = SunTouchTests;
-			productReference = 3B46B6D819AD643D001FFBFB /* SunTouchTests.xctest */;
+			productReference = 1ACDF3A71822D11E00B1C381 /* SunTouchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3B46B6A919AD643D001FFBFB /* Project object */ = {
+		1ACDF3781822D11E00B1C381 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ST;
-				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Pego Consulting";
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Apress;
 				TargetAttributes = {
-					3B46B6D719AD643D001FFBFB = {
-						TestTargetID = 3B46B6B019AD643D001FFBFB;
+					1ACDF37F1822D11E00B1C381 = {
+						DevelopmentTeam = 2473KE85XF;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
+					};
+					1ACDF3A61822D11E00B1C381 = {
+						TestTargetID = 1ACDF37F1822D11E00B1C381;
 					};
 				};
 			};
-			buildConfigurationList = 3B46B6AC19AD643D001FFBFB /* Build configuration list for PBXProject "SunTouch" */;
+			buildConfigurationList = 1ACDF37B1822D11E00B1C381 /* Build configuration list for PBXProject "SunTouch" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -221,98 +269,106 @@
 				en,
 				Base,
 			);
-			mainGroup = 3B46B6A819AD643D001FFBFB;
-			productRefGroup = 3B46B6B219AD643D001FFBFB /* Products */;
+			mainGroup = 1ACDF3771822D11E00B1C381;
+			productRefGroup = 1ACDF3811822D11E00B1C381 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3B46B6B019AD643D001FFBFB /* SunTouch */,
-				3B46B6D719AD643D001FFBFB /* SunTouchTests */,
+				1ACDF37F1822D11E00B1C381 /* SunTouch */,
+				1ACDF3A61822D11E00B1C381 /* SunTouchTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3B46B6AF19AD643D001FFBFB /* Resources */ = {
+		1ACDF37E1822D11E00B1C381 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B46B6CB19AD643D001FFBFB /* Main_iPad.storyboard in Resources */,
-				3B46B6D319AD643D001FFBFB /* Images.xcassets in Resources */,
-				3B46B6C819AD643D001FFBFB /* Main_iPhone.storyboard in Resources */,
-				3B46B6BF19AD643D001FFBFB /* InfoPlist.strings in Resources */,
+				1ACDF39A1822D11E00B1C381 /* Main_iPad.storyboard in Resources */,
+				1ACDF3A21822D11E00B1C381 /* Images.xcassets in Resources */,
+				1ACDF3971822D11E00B1C381 /* Main_iPhone.storyboard in Resources */,
+				1ACDF38E1822D11E00B1C381 /* InfoPlist.strings in Resources */,
+				1ACA686C18232EFC00A247C5 /* STGameViewController.xib in Resources */,
+				3B46B6F519B000F1001FFBFB /* pew-pew-lei.caf in Resources */,
+				3B46B6F719B0038C001FFBFB /* explosion-02.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B46B6D619AD643D001FFBFB /* Resources */ = {
+		1ACDF3A51822D11E00B1C381 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B46B6E419AD643D001FFBFB /* InfoPlist.strings in Resources */,
+				1ACDF3B31822D11E00B1C381 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3B46B6AD19AD643D001FFBFB /* Sources */ = {
+		1ACDF37C1822D11E00B1C381 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B46B6C119AD643D001FFBFB /* main.m in Sources */,
-				3B46B6CE19AD643D001FFBFB /* STMainViewController.m in Sources */,
-				3B46B6C519AD643D001FFBFB /* STAppDelegate.m in Sources */,
-				3B46B6D119AD643D001FFBFB /* STFlipsideViewController.m in Sources */,
+				1ACA686B18232EFC00A247C5 /* STGameViewController.m in Sources */,
+				1ACA686F18232F0B00A247C5 /* STGameView.m in Sources */,
+				1ACA687418232F1900A247C5 /* STStrike.m in Sources */,
+				1ACDF3901822D11E00B1C381 /* main.m in Sources */,
+				1ACDF39D1822D11E00B1C381 /* STMainViewController.m in Sources */,
+				1ACDF3941822D11E00B1C381 /* STAppDelegate.m in Sources */,
+				1ACDF3A01822D11E00B1C381 /* STFlipsideViewController.m in Sources */,
+				1ACA687818232F2000A247C5 /* STGame.m in Sources */,
+				1ACA687518232F1900A247C5 /* STSun.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B46B6D419AD643D001FFBFB /* Sources */ = {
+		1ACDF3A31822D11E00B1C381 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B46B6E619AD643D001FFBFB /* SunTouchTests.m in Sources */,
+				1ACDF3B51822D11E00B1C381 /* SunTouchTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3B46B6DE19AD643D001FFBFB /* PBXTargetDependency */ = {
+		1ACDF3AD1822D11E00B1C381 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3B46B6B019AD643D001FFBFB /* SunTouch */;
-			targetProxy = 3B46B6DD19AD643D001FFBFB /* PBXContainerItemProxy */;
+			target = 1ACDF37F1822D11E00B1C381 /* SunTouch */;
+			targetProxy = 1ACDF3AC1822D11E00B1C381 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3B46B6BD19AD643D001FFBFB /* InfoPlist.strings */ = {
+		1ACDF38C1822D11E00B1C381 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3B46B6BE19AD643D001FFBFB /* en */,
+				1ACDF38D1822D11E00B1C381 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		3B46B6C619AD643D001FFBFB /* Main_iPhone.storyboard */ = {
+		1ACDF3951822D11E00B1C381 /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3B46B6C719AD643D001FFBFB /* Base */,
+				1ACDF3961822D11E00B1C381 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		3B46B6C919AD643D001FFBFB /* Main_iPad.storyboard */ = {
+		1ACDF3981822D11E00B1C381 /* Main_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3B46B6CA19AD643D001FFBFB /* Base */,
+				1ACDF3991822D11E00B1C381 /* Base */,
 			);
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
-		3B46B6E219AD643D001FFBFB /* InfoPlist.strings */ = {
+		1ACDF3B11822D11E00B1C381 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3B46B6E319AD643D001FFBFB /* en */,
+				1ACDF3B21822D11E00B1C381 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -320,10 +376,11 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3B46B6E719AD643D001FFBFB /* Debug */ = {
+		1ACDF3B61822D11E00B1C381 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -349,20 +406,21 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		3B46B6E819AD643D001FFBFB /* Release */ = {
+		1ACDF3B71822D11E00B1C381 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -382,45 +440,52 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		3B46B6EA19AD643D001FFBFB /* Debug */ = {
+		1ACDF3B91822D11E00B1C381 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SunTouch/SunTouch-Prefix.pch";
 				INFOPLIST_FILE = "SunTouch/SunTouch-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		3B46B6EB19AD643D001FFBFB /* Release */ = {
+		1ACDF3BA1822D11E00B1C381 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SunTouch/SunTouch-Prefix.pch";
 				INFOPLIST_FILE = "SunTouch/SunTouch-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		3B46B6ED19AD643D001FFBFB /* Debug */ = {
+		1ACDF3BC1822D11E00B1C381 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SunTouch.app/SunTouch";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -440,9 +505,10 @@
 			};
 			name = Debug;
 		};
-		3B46B6EE19AD643D001FFBFB /* Release */ = {
+		1ACDF3BD1822D11E00B1C381 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SunTouch.app/SunTouch";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -461,32 +527,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3B46B6AC19AD643D001FFBFB /* Build configuration list for PBXProject "SunTouch" */ = {
+		1ACDF37B1822D11E00B1C381 /* Build configuration list for PBXProject "SunTouch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B46B6E719AD643D001FFBFB /* Debug */,
-				3B46B6E819AD643D001FFBFB /* Release */,
+				1ACDF3B61822D11E00B1C381 /* Debug */,
+				1ACDF3B71822D11E00B1C381 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B46B6E919AD643D001FFBFB /* Build configuration list for PBXNativeTarget "SunTouch" */ = {
+		1ACDF3B81822D11E00B1C381 /* Build configuration list for PBXNativeTarget "SunTouch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B46B6EA19AD643D001FFBFB /* Debug */,
-				3B46B6EB19AD643D001FFBFB /* Release */,
+				1ACDF3B91822D11E00B1C381 /* Debug */,
+				1ACDF3BA1822D11E00B1C381 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		3B46B6EC19AD643D001FFBFB /* Build configuration list for PBXNativeTarget "SunTouchTests" */ = {
+		1ACDF3BB1822D11E00B1C381 /* Build configuration list for PBXNativeTarget "SunTouchTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B46B6ED19AD643D001FFBFB /* Debug */,
-				3B46B6EE19AD643D001FFBFB /* Release */,
+				1ACDF3BC1822D11E00B1C381 /* Debug */,
+				1ACDF3BD1822D11E00B1C381 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3B46B6A919AD643D001FFBFB /* Project object */;
+	rootObject = 1ACDF3781822D11E00B1C381 /* Project object */;
 }

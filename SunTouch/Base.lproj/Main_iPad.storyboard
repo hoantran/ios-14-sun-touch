@@ -9,21 +9,21 @@
             <objects>
                 <viewController id="aVO-UE-KGo" customClass="STMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="THG-IO-ERe"/>
-                        <viewControllerLayoutGuide type="bottom" id="Qaj-yK-c03"/>
+                        <viewControllerLayoutGuide type="top" id="jN8-5b-Hfx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yjh-1X-sxj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mX8-Ee-eGC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Billboard-iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="SMR-ol-cuw">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Billboard-ipad" translatesAutoresizingMaskIntoConstraints="NO" id="ewz-FM-8hY">
+                                <rect key="frame" x="0.0" y="44" width="768" height="980"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="S2d-ll-A4h">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="1AQ-Iv-sif">
+                                    <navigationItem title="SunTouch" id="1AQ-Iv-sif">
                                         <barButtonItem key="rightBarButtonItem" title="Instructions" id="eoT-a4-CEx">
                                             <connections>
                                                 <action selector="togglePopover:" destination="aVO-UE-KGo" id="VBk-0g-Jb3"/>
@@ -32,37 +32,59 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igS-aU-mtl">
-                                <rect key="frame" x="284" y="531" width="200" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3B-y3-RWP">
+                                <rect key="frame" x="339" y="736" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Single Player">
-                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="y9J-KJ-x5l" kind="modal" identifier="singlePlayer" id="ye2-m0-hHu"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9K-CL-QyU">
+                                <rect key="frame" x="347" y="774" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Two Player">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDS-VM-C9r">
-                                <rect key="frame" x="284" y="569" width="200" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgJ-Z9-dfT">
+                                <rect key="frame" x="726" y="994" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Double Player">
-                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Gry-bV-9s8"/>
+                                    <constraint firstAttribute="width" constant="22" id="n21-lY-xpI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="GameCenter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="showGameCenter" destination="aVO-UE-KGo" eventType="touchUpInside" id="AYO-7p-bZz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oDS-VM-C9r" firstAttribute="top" secondItem="igS-aU-mtl" secondAttribute="bottom" constant="8" id="0q8-kg-npD"/>
-                            <constraint firstItem="Qaj-yK-c03" firstAttribute="top" secondItem="oDS-VM-C9r" secondAttribute="bottom" constant="425" id="1p7-4u-tI9"/>
-                            <constraint firstAttribute="centerX" secondItem="igS-aU-mtl" secondAttribute="centerX" id="GmP-h7-TfW"/>
+                            <constraint firstItem="Yjh-1X-sxj" firstAttribute="top" secondItem="ewz-FM-8hY" secondAttribute="bottom" id="AeM-KD-I8B"/>
                             <constraint firstItem="S2d-ll-A4h" firstAttribute="top" secondItem="mX8-Ee-eGC" secondAttribute="top" id="Kzf-4S-Y7T"/>
-                            <constraint firstItem="Qaj-yK-c03" firstAttribute="top" secondItem="SMR-ol-cuw" secondAttribute="bottom" id="NEe-jk-rqd"/>
-                            <constraint firstItem="SMR-ol-cuw" firstAttribute="top" secondItem="THG-IO-ERe" secondAttribute="top" id="Z6S-yS-5iz"/>
-                            <constraint firstItem="SMR-ol-cuw" firstAttribute="leading" secondItem="mX8-Ee-eGC" secondAttribute="leading" id="atT-wU-PPK"/>
-                            <constraint firstAttribute="centerX" secondItem="oDS-VM-C9r" secondAttribute="centerX" id="b0l-RN-vGu"/>
-                            <constraint firstAttribute="trailing" secondItem="SMR-ol-cuw" secondAttribute="trailing" id="h6b-Js-Y0o"/>
+                            <constraint firstItem="G9K-CL-QyU" firstAttribute="top" secondItem="J3B-y3-RWP" secondAttribute="bottom" constant="8" id="Owr-1s-YB7"/>
+                            <constraint firstAttribute="centerX" secondItem="J3B-y3-RWP" secondAttribute="centerX" id="Wms-03-s9n"/>
+                            <constraint firstAttribute="trailing" secondItem="ewz-FM-8hY" secondAttribute="trailing" id="Wqc-if-xhh"/>
+                            <constraint firstItem="ewz-FM-8hY" firstAttribute="top" secondItem="jN8-5b-Hfx" secondAttribute="bottom" constant="24" id="bkd-pC-Bmh"/>
+                            <constraint firstItem="Yjh-1X-sxj" firstAttribute="top" secondItem="G9K-CL-QyU" secondAttribute="bottom" constant="220" id="ctN-eg-UGR"/>
+                            <constraint firstItem="Yjh-1X-sxj" firstAttribute="top" secondItem="OgJ-Z9-dfT" secondAttribute="bottom" constant="20" symbolic="YES" id="d5u-2T-XlZ"/>
+                            <constraint firstAttribute="centerX" secondItem="G9K-CL-QyU" secondAttribute="centerX" id="hdb-ve-PgD"/>
+                            <constraint firstAttribute="trailing" secondItem="OgJ-Z9-dfT" secondAttribute="trailing" constant="20" symbolic="YES" id="jPb-FZ-Tal"/>
                             <constraint firstItem="S2d-ll-A4h" firstAttribute="leading" secondItem="mX8-Ee-eGC" secondAttribute="leading" id="jbs-cd-p3c"/>
+                            <constraint firstItem="ewz-FM-8hY" firstAttribute="leading" secondItem="mX8-Ee-eGC" secondAttribute="leading" id="mbJ-Kr-jEC"/>
                             <constraint firstItem="S2d-ll-A4h" firstAttribute="trailing" secondItem="mX8-Ee-eGC" secondAttribute="trailing" id="sah-fe-1aa"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="multiPlayButton" destination="G9K-CL-QyU" id="2mV-p6-3VP"/>
+                        <outlet property="singlePlayButton" destination="J3B-y3-RWP" id="rDw-nh-7rx"/>
                         <segue destination="FTa-do-hRx" kind="popover" identifier="showAlternate" popoverAnchorBarButtonItem="eoT-a4-CEx" id="pXF-iP-W5x">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
@@ -77,15 +99,15 @@
             <objects>
                 <viewController id="FTa-do-hRx" customClass="STFlipsideViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xvC-rR-r8y"/>
-                        <viewControllerLayoutGuide type="bottom" id="U2r-Sf-pG5"/>
+                        <viewControllerLayoutGuide type="top" id="ZdM-bB-lt7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vbi-vQ-KiA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yVM-ax-DI8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Starfield" translatesAutoresizingMaskIntoConstraints="NO" id="trz-Iv-ZOm">
-                                <rect key="frame" x="20" y="44" width="275" height="779"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Starfield" translatesAutoresizingMaskIntoConstraints="NO" id="7xz-Qy-e3E">
+                                <rect key="frame" x="-3" y="44" width="323" height="456"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="8Bx-U8-Xwy">
@@ -100,42 +122,55 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Strike" translatesAutoresizingMaskIntoConstraints="NO" id="p9V-us-tUu">
-                                <rect key="frame" x="25" y="59" width="115" height="118"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" image="Strike" translatesAutoresizingMaskIntoConstraints="NO" id="cX4-y9-EKl">
+                                <rect key="frame" x="32" y="94" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="8Cs-8x-n7O"/>
+                                    <constraint firstAttribute="width" constant="100" id="An7-jA-gYF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SunHot" translatesAutoresizingMaskIntoConstraints="NO" id="qO9-nU-bqd">
+                                <rect key="frame" x="60" y="236" width="24" height="24"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEd-Ow-fOX">
-                                <rect key="frame" x="74" y="83" width="141" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SunHot" translatesAutoresizingMaskIntoConstraints="NO" id="Bda-7P-HXj">
+                                <rect key="frame" x="52" y="265" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SunCold" translatesAutoresizingMaskIntoConstraints="NO" id="rW4-u5-ZAG">
+                                <rect key="frame" x="70" y="336" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Touch to blast holes in space and uncover suns." translatesAutoresizingMaskIntoConstraints="NO" id="BoJ-uN-IOO">
+                                <rect key="frame" x="103" y="144" width="173" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.48999999999999999" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SunHot" translatesAutoresizingMaskIntoConstraints="NO" id="Vkx-ra-e6c">
-                                <rect key="frame" x="117" y="185" width="115" height="118"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Collect all eight suns to win. The faster you collect them, the higher your score." translatesAutoresizingMaskIntoConstraints="NO" id="h8a-s9-lID">
+                                <rect key="frame" x="92" y="229" width="196" height="67"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHd-aE-UIT">
-                                <rect key="frame" x="154" y="222" width="141" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.48999999999999999" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SunCold" translatesAutoresizingMaskIntoConstraints="NO" id="1XQ-Rh-l4a">
-                                <rect key="frame" x="20" y="294" width="115" height="118"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Collect the suns before your opponent does!" translatesAutoresizingMaskIntoConstraints="NO" id="sMZ-1H-Ws2">
+                                <rect key="frame" x="103" y="322" width="160" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="it9-0L-3bf">
-                                <rect key="frame" x="57" y="369" width="141" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.48999999999999999" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Pinch to end game." translatesAutoresizingMaskIntoConstraints="NO" id="248-vb-6AG">
+                                <rect key="frame" x="101" y="403" width="136" height="33"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.48999999999999999" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -143,30 +178,40 @@
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8Bx-U8-Xwy" firstAttribute="trailing" secondItem="yVM-ax-DI8" secondAttribute="trailing" id="0V8-nh-N0D"/>
-                            <constraint firstItem="trz-Iv-ZOm" firstAttribute="leading" secondItem="yVM-ax-DI8" secondAttribute="leading" id="M8H-0c-mOl"/>
+                            <constraint firstItem="7xz-Qy-e3E" firstAttribute="top" secondItem="ZdM-bB-lt7" secondAttribute="bottom" constant="24" id="3Hy-iS-QAG"/>
+                            <constraint firstAttribute="trailing" secondItem="7xz-Qy-e3E" secondAttribute="trailing" id="JBv-BN-Ed6"/>
+                            <constraint firstItem="Vbi-vQ-KiA" firstAttribute="top" secondItem="7xz-Qy-e3E" secondAttribute="bottom" id="K2G-np-Qt0"/>
                             <constraint firstItem="8Bx-U8-Xwy" firstAttribute="leading" secondItem="yVM-ax-DI8" secondAttribute="leading" id="Qsp-E0-TDi"/>
-                            <constraint firstItem="trz-Iv-ZOm" firstAttribute="top" secondItem="xvC-rR-r8y" secondAttribute="bottom" constant="24" id="emH-l7-OyM"/>
-                            <constraint firstItem="U2r-Sf-pG5" firstAttribute="top" secondItem="trz-Iv-ZOm" secondAttribute="bottom" id="msd-aZ-vOY"/>
+                            <constraint firstItem="7xz-Qy-e3E" firstAttribute="leading" secondItem="yVM-ax-DI8" secondAttribute="leading" constant="-3" id="iFo-He-aBj"/>
                             <constraint firstItem="8Bx-U8-Xwy" firstAttribute="top" secondItem="yVM-ax-DI8" secondAttribute="top" id="z1z-qr-Bs3"/>
-                            <constraint firstAttribute="trailing" secondItem="trz-Iv-ZOm" secondAttribute="trailing" id="zmS-dA-0np"/>
                         </constraints>
                     </view>
-                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="500"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9mE-fb-xOw" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="101"/>
+            <point key="canvasLocation" x="652" y="-151"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="zCe-4r-mlS">
+            <objects>
+                <viewController id="y9J-KJ-x5l" customClass="STGameViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bBK-MR-sRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="580"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Billboard-iPhone" width="320" height="568"/>
+        <image name="Billboard-ipad" width="768" height="1006"/>
+        <image name="GameCenter" width="22" height="22"/>
         <image name="Starfield" width="894" height="894"/>
         <image name="Strike" width="768" height="768"/>
         <image name="SunCold" width="24" height="24"/>
         <image name="SunHot" width="24" height="24"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>

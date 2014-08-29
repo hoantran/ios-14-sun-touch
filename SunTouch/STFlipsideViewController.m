@@ -2,8 +2,8 @@
 //  STFlipsideViewController.m
 //  SunTouch
 //
-//  Created by Hoan Tran on 8/26/14.
-//  Copyright (c) 2014 Pego Consulting. All rights reserved.
+//  Created by James Bucanek on 10/31/13.
+//  Copyright (c) 2013 Apress. All rights reserved.
 //
 
 #import "STFlipsideViewController.h"
