@@ -41,20 +41,6 @@
 #pragma mark -
 @implementation STGameView
 
-
-//- (id)initWithFrame:(CGRect)frame
-//{
-//    self = [super initWithFrame:frame];
-//    if (self) {
-//        //
-//    }
-//    
-//    NSLog(@"initWithFrame");
-//    
-//    return self;
-//}
-
-
 - (void)dealloc
 {
     [self observeNotificationsFromGame:nil];	// remove all observers
@@ -62,9 +48,6 @@
 
 - (void)reset
 {
-    NSLog(@"---- RESET ----");
-    NSLog(sunsShown ? @"Yes" : @"No");
-    
 	// Clear/setup the strike and sun collections
 	strikes = [NSMutableArray new];
 	sunViews = [NSMutableDictionary new];
@@ -73,7 +56,6 @@
 	CGRect bounds = self.bounds;
 	sunSettlePoint = CGPointMake(CGRectGetMaxX(bounds)-(kSunStrikeEndRadius+2),
 								 -kSunStrikeEndRadius);
-    
     // clear sun-hint locations
     if (sunsShown) {
         [[self subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
@@ -81,11 +63,38 @@
     }
 }
 
+- (void)showASun:(STSun *)sun
+{
+    //    NSLog(@"%@", NSStringFromCGPoint(sun.location));
+    
+    CGPoint sunLocation = [self pointFromUnitPoint:sun.location];
+    CGRect beginRect = CircleRect(sunLocation,kSunStrikeBeginRadius);
+    
+    // Create the sun view object
+    UIImageView *sunView = [[UIImageView alloc] initWithFrame:beginRect];
+    sunView.opaque = YES;
+    [self addSubview:sunView];
+    sunView.image = [UIImage imageNamed:@"SunCold"];
+}
+
+
+- (void)showSunsNotification:(NSNotification*)notification
+{
+    if (!sunsShown) {
+        NSLog(@"showSunsNotification");
+        NSDictionary *info = notification.userInfo;
+        NSArray *suns = info[kGameInfoSunArray];
+        for ( STSun* sun in suns )
+        {
+            [self showASun:sun];
+        }
+        sunsShown = YES;
+    }
+}
+
+
 - (void)observeNotificationsFromGame:(STGame*)game
 {
-    NSLog(@"observeNotificationsFromGame");
-    NSLog(@"game: %p", game);
-    
 	// Begin observing notification from the given game object
 	NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
 	
@@ -94,27 +103,29 @@
 	
 	if (game!=nil)
 		{
-            [notificationCenter addObserver:self
-                                   selector:@selector(strikeNotification:)
-                                       name:kGameStrikeNotification
-                                     object:game];
-            [notificationCenter addObserver:self
-                                   selector:@selector(captureNotification:)
-                                       name:kGameSunCaptureNotification
-                                     object:game];
-            [notificationCenter     addObserver:self
-                                       selector:@selector(showSunsNotification:)
-                                           name:kGameShowSuns
-                                         object:game];
-            [notificationCenter     addObserver:self
-                                       selector:@selector(hideSunsNotification:)
-                                           name:kGameHideSuns
-                                         object:game];
+		[notificationCenter addObserver:self
+							   selector:@selector(strikeNotification:)
+								   name:kGameStrikeNotification
+								 object:game];
+		[notificationCenter addObserver:self
+							   selector:@selector(captureNotification:)
+								   name:kGameSunCaptureNotification
+								 object:game];
+        [notificationCenter addObserver:self
+                               selector:@selector(showSunsNotification:)
+                                   name:kGameShowSuns
+                                 object:game];
+		
         }
-
 }
 
 #pragma mark Properties
+
+- (BOOL)opponent
+{
+	// The base class displays the local (not the opponent's) game view
+	return NO;
+}
 
 - (UIImage*)strikeImage
 {
@@ -144,7 +155,15 @@
 	
 	NSDictionary *info = notification.userInfo;
 	STStrike *strike = info[kGameInfoStrike];
+	BOOL opponent = [info[kGameInfoOpponent] boolValue];
 	
+	// Strike display and animation occurs in the game view for that player:
+	//  the local game view only displays the strikes from the local player,
+    //  and the opponent game view only displays strikes for the remote player.
+	// If the source of the strike doesn't match this view, ignore it.
+	if (opponent!=self.opponent)
+		return;
+
 	// Determine the location of the strike in the view and create the image subview
 	CGPoint location = [self pointFromUnitPoint:strike.location];
 	CGFloat strikeRadius = [self radiusFromUnitRadius:strike.radius];
@@ -193,42 +212,6 @@
 						 }
 					 }];
 }
-
-- (void)showASun:(STSun *)sun
-{
-//    NSLog(@"%@", NSStringFromCGPoint(sun.location));
-    
-    CGPoint sunLocation = [self pointFromUnitPoint:sun.location];
-    CGRect beginRect = CircleRect(sunLocation,kSunStrikeBeginRadius);
-    
-    // Create the sun view object
-    UIImageView *sunView = [[UIImageView alloc] initWithFrame:beginRect];
-    sunView.opaque = YES;
-    [self addSubview:sunView];
-    sunView.image = [UIImage imageNamed:@"SunCold"];
-}
-
-
-- (void)showSunsNotification:(NSNotification*)notification
-{
-    if (!sunsShown) {
-        NSLog(@"showSunsNotification");
-        NSDictionary *info = notification.userInfo;
-        NSArray *suns = info[kGameInfoSunArray];
-        for ( STSun* sun in suns )
-        {
-            [self showASun:sun];
-        }
-        sunsShown = YES;
-    }
-}
-
-- (void)hideSunsNotification:(NSNotification*)notification
-{
-    NSLog(@"hideSunsNotification");
-}
-
-
 
 - (void)captureNotification:(NSNotification*)notification
 {
@@ -299,7 +282,10 @@
 		[sunViews setObject:sun forKey:sunKey];
 		}
 	
-	sunView.image = [UIImage imageNamed:@"SunHot"];
+	// Set the image based on whether the local player captured the sun, or the opponent did.
+	// If this is an update (i.e. this is the second time that -captureNotification: was received for
+	//	the same sun) this will replace the image, essentually "stealing" the sun from the other player.
+	sunView.image = [UIImage imageNamed:(sun.localPlayer?@"SunHot":@"SunCold")];
 }
 
 - (CGPoint)nextSunSettlePoint

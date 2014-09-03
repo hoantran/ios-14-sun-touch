@@ -14,6 +14,7 @@
 
 @import AVFoundation;
 
+
 @interface STGameViewController ()
 {
 	NSNumberFormatter	*scoreFormatter;
@@ -22,9 +23,10 @@
 	UIAlertView			*endGameAlert;
 }
 @property (strong,nonatomic)			STGame		*game;
-@property (strong,nonatomic) IBOutlet	STGameView	*gameView;
+@property (weak,nonatomic) IBOutlet	STGameView      *gameView;
+@property (weak,nonatomic) IBOutlet STGameView      *opponentGameView;
 
-@property (assign) SystemSoundID pewPewSound;
+@property (assign) SystemSoundID blastSound;
 
 - (void)startStrikeGrowAnimation;
 - (void)updateScoreNotification:(NSNotification*)notification;
@@ -32,29 +34,12 @@
 - (void)stopWeightTimer;
 - (void)updateWeightTime:(NSTimer*)timer;
 
-- (IBAction)showSuns:(UITapGestureRecognizer*)gesture;
-
 @end
 
 
 @implementation STGameViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-	// Create a formatter that will be used to display scores
-	scoreFormatter = [NSNumberFormatter new];
-	[scoreFormatter setPositiveFormat:@"#,##0"];
-    
-    //
-    NSLog(@"** viewDidLoad **");
-    if (self) {
-        [self configureSystemSound];
-    }
-    
-//    [self playSystemSound];
-}
+// ADDING SOUND
 
 - (void)configureSystemSound {
     // This is the simplest way to play a sound.
@@ -63,16 +48,59 @@
 	// Data Formats (a.k.a. audio encoding): linear PCM (such as LEI16) or IMA4
 	// Sounds must be 30 sec or less
 	// And only one sound plays at a time!
-//	NSString *pewPewPath = [[NSBundle mainBundle] pathForResource:@"pew-pew-lei" ofType:@"caf"];
-    NSString *pewPewPath = [[NSBundle mainBundle] pathForResource:@"explosion-02" ofType:@"wav"];
-	NSURL *pewPewURL = [NSURL fileURLWithPath:pewPewPath];
-	AudioServicesCreateSystemSoundID((__bridge CFURLRef)pewPewURL, &_pewPewSound);
+    NSString *blastSoundPath = [[NSBundle mainBundle] pathForResource:@"explosion-02" ofType:@"wav"];
+	NSURL *blastSoundURL = [NSURL fileURLWithPath:blastSoundPath];
+	AudioServicesCreateSystemSoundID((__bridge CFURLRef)blastSoundURL, &_blastSound);
 }
 
 - (void)playSystemSound {
-    NSLog(@"playSystemSound: %d", (unsigned int)self.pewPewSound);
-    AudioServicesPlaySystemSound(self.pewPewSound);
+    NSLog(@"playSystemSound: %d", (unsigned int)self.blastSound);
+    AudioServicesPlaySystemSound(self.blastSound);
 }
+
+
+
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+	// Determine if this is a single or two player game
+	if (self.twoPlayer)
+		{
+		// Two player game uses two views: the local game view sits on top
+		//	of the opponent's game view, and the top view is set to !opaque
+		//	so you can see the opponent's gameplay through the transparent bits.
+		self.gameView.opaque = NO;
+		}
+	else
+		{
+		// The single player game doesn't use an opponent game view: discard it
+		[self.opponentGameView removeFromSuperview];
+		self.opponentGameView = nil;
+		// Make the local game view opaque, since there's now no opponent
+		//	game view behind it to show through the transparent bits
+		self.gameView.opaque = YES;
+		}
+    
+	// Create a formatter that will be used to display scores
+	scoreFormatter = [NSNumberFormatter new];
+	[scoreFormatter setPositiveFormat:@"#,##0"];
+    
+    if (self) {
+        [self configureSystemSound];
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -119,6 +147,7 @@
 							   name:kGameScoreDidChangeNotification
 							 object:self.game];
     
+    
     // triple tap
     UITapGestureRecognizer *tripleTapGesture;
     tripleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
@@ -128,6 +157,15 @@
 	
 	// Start/resume the game
 	[self startGame];
+}
+
+- (IBAction)showSuns:(UITapGestureRecognizer *)gesture
+{
+    NSLog(@"Triple Tap!");
+    if (self.game!=nil)
+    {
+        [self.game showSuns];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -145,6 +183,26 @@
     return YES;
 }
 
+#pragma mark Orientations
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+	// Return a bit mask that restricts the view orientations to just the
+	//	one orientation that was set when the game began.
+	switch (self.lockedOrientation) {
+		case UIInterfaceOrientationPortrait:
+            return UIInterfaceOrientationMaskPortrait;
+		case UIInterfaceOrientationPortraitUpsideDown:
+            return UIInterfaceOrientationMaskPortraitUpsideDown;
+		case UIInterfaceOrientationLandscapeLeft:
+            return UIInterfaceOrientationMaskLandscapeLeft;
+		case UIInterfaceOrientationLandscapeRight:
+            return UIInterfaceOrientationMaskLandscapeRight;
+        }
+	// 0 == unknown == unlocked: allow all orientations
+	return UIInterfaceOrientationMaskAll;
+}
+
 #pragma mark Game Management
 
 - (void)startGame
@@ -157,23 +215,43 @@
 		
 		// Clear/reset the game views
 		[self.gameView reset];
+		[self.opponentGameView reset];
 		
-        // A single player game begins immediately
-        
-        // Tell the single game view to observe game notifications from this game
-        [self.gameView observeNotificationsFromGame:game];
-        
-        // Start the game
-        [game startSinglePlayer];
-        
-        // Start the strike preview growing
-        [self startStrikeGrowAnimation];
+		if (self.twoPlayer)
+			{
+			// Starting a two player game begins by choosing another player to play with
+			GKMatchRequest *request = [GKMatchRequest new];
+			request.minPlayers = 2;
+			request.maxPlayers = 2;
+			request.defaultNumberOfPlayers = 2;
+			
+			GKMatchmakerViewController *mmvc;
+			mmvc = [[GKMatchmakerViewController alloc] initWithMatchRequest:request];
+			mmvc.matchmakerDelegate = self;
+			
+			[self presentViewController:mmvc animated:YES completion:nil];
+			// The next step occurs in -matchmakerViewController:didFindMatch:
+			}
+		else
+			{
+			// A single player game begins immediately
+			
+			// Tell the single game view to observe game notifications from this game
+			[self.gameView observeNotificationsFromGame:game];
+			
+			// Start the game
+			[game startSinglePlayer];
+			
+			// Start the strike preview growing
+			[self startStrikeGrowAnimation];
+			}
+		
 		}
 }
 
 - (void)finishGame
 {
-    // The game is finished. Tell the player their score and record it in Game Center.
+    // The game finished. Tell the player their score and record it in Game Center.
     
 	// (endGameAlert also acts as a flag to indicate that a -finishGame message has been recieved already.
     //  That could happen if the game ended near time the player pinched to stop.)
@@ -183,9 +261,21 @@
 		NSUInteger score = self.game.score;
 		NSNumber *scoreValue = @(score);
 		NSString *title = @"Congratulations!";
-		NSString *message = [NSString stringWithFormat:@"Your score: %@",
-                             [scoreFormatter stringFromNumber:scoreValue]];
-		
+		NSString *message;
+		if (self.twoPlayer)
+			{
+			NSUInteger opponentScore = self.game.opponentScore;
+			if (score<opponentScore)
+				title = @"Sorry!";
+			message = [NSString stringWithFormat:@"Your score: %@\rOpponent's score: %@",
+					   [scoreFormatter stringFromNumber:scoreValue],
+					   [scoreFormatter stringFromNumber:@(opponentScore)]];
+			}
+		else
+			{
+			message = [NSString stringWithFormat:@"Your score: %@",
+					   [scoreFormatter stringFromNumber:scoreValue]];
+			}
 		endGameAlert = [[UIAlertView alloc] initWithTitle:title
 												  message:message
 												 delegate:self
@@ -197,9 +287,12 @@
 		self.strikePreview.hidden = YES;
         
 		// Record the score and end the game
-		GKScore *scoreReport = [[GKScore alloc] initWithLeaderboardIdentifier:kSinglePlayerLeaderboardID];
+		NSString *leaderboardID = kSinglePlayerLeaderboardID;
+		if (self.twoPlayer)
+			leaderboardID = kTwoPlayerLeaderboardID;
+		GKScore *scoreReport = [[GKScore alloc] initWithLeaderboardIdentifier:leaderboardID];
 		scoreReport.value = score;
-        [GKScore reportScores:@[scoreReport] withCompletionHandler:^(NSError *error) {
+		[GKScore reportScores:@[scoreReport] withCompletionHandler:^(NSError *error) {
             // TODO: check for errors or get leaderboard results
             }];
 		}
@@ -217,6 +310,47 @@
 		// Discard the game object: this destroys the game and debounces this method
 		self.game = nil;
 		}
+}
+
+#pragma mark <GKMatchmakerViewControllerDelegate>
+
+- (void)matchmakerViewController:(GKMatchmakerViewController *)viewController didFindMatch:(GKMatch *)match
+{
+	// We have a match!
+	
+	// Dismiss the view, and wait until all of the players have joined the game
+	[self dismissViewControllerAnimated:YES completion:nil];
+	if (match.expectedPlayerCount==0)
+		{
+		// The expectedPlayerCount is zero, which means that all of the player that were
+		//	expected to join the game have.
+		// Start a multi-player game.
+		[self.game startMultiPlayerWithMatch:match started:^{
+			// This block is executed when the game actually starts
+			// Tell the game views to observe game notifications
+			[self.gameView observeNotificationsFromGame:self.game];
+			[self.opponentGameView observeNotificationsFromGame:self.game];
+			// Start the strike preview growing
+			[self startStrikeGrowAnimation];
+            }];
+		}
+}
+
+- (void)matchmakerViewControllerWasCancelled:(GKMatchmakerViewController *)viewController
+{
+	// Matchmaking was canceled
+	
+	// Post a "game ended" notification, which will dismiss the game view controller, dismissing
+	//	the match view controller in the process
+	[[NSNotificationCenter defaultCenter] postNotificationName:kGameDidEndNotifcation
+														object:self];
+}
+
+- (void)matchmakerViewController:(GKMatchmakerViewController *)viewController
+				didFailWithError:(NSError *)error
+{
+	// Treat an error as a cancel
+	[self matchmakerViewControllerWasCancelled:viewController];
 }
 
 #pragma mark User Events
@@ -255,10 +389,9 @@
 	
 	// Last, but not least, restart the strike size over at its minimum again
 	[self startStrikeGrowAnimation];
-    
+	
     // sound
     [self playSystemSound];
-	
 }
 
 - (void)pinchGesture
@@ -274,15 +407,6 @@
 	
 	// It's all over!
 	[self gameOver];
-}
-
-- (IBAction)showSuns:(UITapGestureRecognizer *)gesture
-{
-    NSLog(@"Triple Tap!");
-    if (self.game!=nil)
-    {
-        [self.game showSuns];
-    }
 }
 
 #pragma mark Periodic Maintenance

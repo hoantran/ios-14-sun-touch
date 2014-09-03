@@ -20,6 +20,7 @@
 
 @interface STGameView : UIView
 
+@property (readonly,nonatomic) BOOL opponent;
 @property (readonly,nonatomic) UIImage *strikeImage;
 
 - (void)reset;

@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STGameViewController">
             <connections>
                 <outlet property="gameView" destination="143" id="158"/>
+                <outlet property="opponentGameView" destination="vKZ-2o-2L0" id="96k-Jg-Hzd"/>
                 <outlet property="scoreLabel" destination="84" id="159"/>
                 <outlet property="strikePreviewSuperview" destination="62" id="161"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -23,8 +24,13 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="16" id="xf8-YM-xx4"/>
+                        <constraint firstAttribute="height" constant="16" id="h3q-Jj-dx3"/>
                     </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKZ-2o-2L0" customClass="STOpponentGameView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="552"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="143" customClass="STGameView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="552"/>
@@ -58,19 +64,23 @@
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="143" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="G2B-ZM-DO6"/>
-                <constraint firstItem="84" firstAttribute="baseline" secondItem="80" secondAttribute="baseline" id="HKp-y8-BNG"/>
-                <constraint firstItem="143" firstAttribute="top" secondItem="1" secondAttribute="top" id="KMK-ab-hnv"/>
-                <constraint firstItem="80" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="Mcc-PL-gvK"/>
-                <constraint firstItem="84" firstAttribute="leading" secondItem="80" secondAttribute="trailing" constant="8" symbolic="YES" id="R7b-ze-TN8"/>
-                <constraint firstItem="62" firstAttribute="top" secondItem="143" secondAttribute="bottom" id="SFm-ty-YEP"/>
-                <constraint firstItem="88" firstAttribute="trailing" secondItem="84" secondAttribute="trailing" id="Xz3-iQ-EDB"/>
-                <constraint firstAttribute="bottom" secondItem="62" secondAttribute="bottom" id="abX-Fa-OJ7"/>
-                <constraint firstItem="80" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="eI4-9z-Go2"/>
-                <constraint firstItem="88" firstAttribute="top" secondItem="84" secondAttribute="bottom" constant="3" id="ltU-Aw-14o"/>
-                <constraint firstAttribute="trailing" secondItem="143" secondAttribute="trailing" id="o49-VE-nwI"/>
-                <constraint firstAttribute="trailing" secondItem="62" secondAttribute="trailing" id="qvb-hG-dR6"/>
-                <constraint firstItem="62" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="tUe-N6-xW4"/>
+                <constraint firstAttribute="trailing" secondItem="vKZ-2o-2L0" secondAttribute="trailing" id="40w-je-RMm"/>
+                <constraint firstItem="62" firstAttribute="top" secondItem="143" secondAttribute="bottom" id="4lg-pI-aDt"/>
+                <constraint firstAttribute="trailing" secondItem="143" secondAttribute="trailing" id="4oy-mT-BLr"/>
+                <constraint firstAttribute="trailing" secondItem="62" secondAttribute="trailing" id="6Ka-y2-dhu"/>
+                <constraint firstItem="vKZ-2o-2L0" firstAttribute="top" secondItem="1" secondAttribute="top" id="EVU-HC-Cgh"/>
+                <constraint firstItem="88" firstAttribute="top" secondItem="84" secondAttribute="bottom" constant="3" id="J5y-oD-uwq"/>
+                <constraint firstItem="84" firstAttribute="baseline" secondItem="80" secondAttribute="baseline" id="XZx-lS-2Py"/>
+                <constraint firstItem="62" firstAttribute="top" secondItem="vKZ-2o-2L0" secondAttribute="bottom" id="ZS5-gG-Cjt"/>
+                <constraint firstItem="80" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="Zuo-vW-vAe"/>
+                <constraint firstItem="88" firstAttribute="trailing" secondItem="84" secondAttribute="trailing" id="aTc-Ks-hrh"/>
+                <constraint firstItem="62" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="g4W-P4-7PO"/>
+                <constraint firstItem="143" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="o6R-pn-RxA"/>
+                <constraint firstItem="84" firstAttribute="leading" secondItem="80" secondAttribute="trailing" constant="8" symbolic="YES" id="qz3-cU-j8a"/>
+                <constraint firstItem="143" firstAttribute="top" secondItem="1" secondAttribute="top" id="tOo-8E-bxc"/>
+                <constraint firstItem="vKZ-2o-2L0" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="wre-dx-nZo"/>
+                <constraint firstAttribute="bottom" secondItem="62" secondAttribute="bottom" id="x1F-sb-rfQ"/>
+                <constraint firstItem="80" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="ygH-EF-xU0"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

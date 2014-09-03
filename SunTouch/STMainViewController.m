@@ -93,7 +93,17 @@
 												 selector:@selector(gameEndedNotification:)
 													 name:kGameDidEndNotifcation
 												   object:nil];
-		}
+        
+        // This seque is transistioning to a game view controller
+		STGameViewController* gameViewController = (STGameViewController*)segue.destinationViewController;
+		
+		// Determine if this is a two-player or single-player game using the seque identifier:
+		//	the two-player seque is labeled "twoPlayer", while the single-player seque isn't.
+		gameViewController.twoPlayer = [segue.identifier isEqualToString:@"twoPlayer"];
+		
+		// Lock the orientation of the of view so the game doesn't rotation during gameplay
+		gameViewController.lockedOrientation = self.interfaceOrientation;
+        }
 }
 
 - (IBAction)togglePopover:(id)sender

@@ -39,4 +39,11 @@
     [self.delegate flipsideViewControllerDidFinish:self];
 }
 
+#pragma mark Orientation
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "STGame.h"
-//#import "STGame+Messaging.h"
+#import "STGame+STDataMessaging.h"
 
 #import "STGameDefs.h"
 #import "STStrike.h"
@@ -16,7 +16,9 @@
 
 
 @interface STGame () // private interface
+@property (readonly,nonatomic) BOOL twoPlayer;
 - (void)postCapture:(NSNumber*)sunIndex;
+- (NSUInteger)scoreForLocalPlayer:(BOOL)localPlayer;
 @end
 
 
@@ -81,18 +83,37 @@ collision:
 	if (weight<kWeightMin)
 		weight = kWeightMin;
 	
+	// If this is a two-player game, all scores are doubled
+	if (self.twoPlayer)
+		weight *= 2;
+	
 	return weight;
+}
+
+- (BOOL)twoPlayer
+{
+    return (multiPlayerMatch!=nil);
 }
 
 - (NSUInteger)score
 {
-	// Calculate the score for the player.
+	return [self scoreForLocalPlayer:YES];
+}
+
+- (NSUInteger)opponentScore
+{
+	return [self scoreForLocalPlayer:NO];
+}
+
+- (NSUInteger)scoreForLocalPlayer:(BOOL)localPlayer
+{
+	// Calculate the score for either the local or remote player.
 	// The total score is calculated by adding up the weighted score
 	//	 of every captured sun, after its capture time has elapsed.
 	NSTimeInterval gameTime = self.gameTime;
 	NSUInteger score = 0;
 	for ( STSun* sun in suns )
-		if (sun.captured && sun.time<=gameTime)
+		if (sun.captured && sun.time<=gameTime && sun.localPlayer==localPlayer)
 			score += [self weightAtTime:sun.time];
 	return score;
 }
@@ -116,15 +137,34 @@ collision:
 	suns = [STGame randomSuns];				// create a random set of suns
 }
 
+- (void)startMultiPlayerWithMatch:(GKMatch*)match started:(void(^)(void))started
+{
+	// Start a multi-player game
+    
+	// Save the started block (this will be called when the game actually starts)
+	multiPlayStarted = started;				// save the "did start" block
+    
+	suns = [STGame randomSuns];				// create a random set of suns
+	coinToss = arc4random();				// toss the coin
+	
+	// Set up the GKMatch object, which is the communications link with the other player(s)
+	multiPlayerMatch = match;				// keep a reference to the match
+	match.delegate = self;					// set this object as the match delegate
+    // Note: make sure the game is ready to go before setting the GKMatch.delegate.
+    //		 Setting the delegate may immediately deliver messages, even before the
+    //		 call to the setter returns.
+    
+	// Send the "game started" message to the other player.
+	[self sendGameStart];
+	// The game begins when we receive a "game started" message from our opponent
+}
+
 #pragma Game Logic
 
 - (void)strike:(CGPoint)viewLocation
 		radius:(CGFloat)viewRadius
 		inView:(STGameView*)gameView
 {
-//    [self showSuns];
-//    NSLog(@"notificationCenter: %p", [NSNotificationCenter defaultCenter]);
-    
 	// location and radius are in view coordinates
 	// (this has to be done so the aspect ratio of the game view is taken into
 	//	account when searching for sun collisions)
@@ -134,11 +174,14 @@ collision:
 	strike.location = [gameView unitPointFromPoint:viewLocation];
 	strike.radius = [gameView unitRadiusFromRadius:viewRadius];
 	
+	// Send the strike to the remote player
+	[self sendStrike:strike];
+    
 	// Post a "strike" notification so all observers know a strike occurred.
 	// The notification includes the strike object and a flag to indicate this
 	//	strike belongs to the local player. (Opponent strike notifications are
 	//	posted elsewhere.)
-	NSDictionary *strikeInfo = @{ kGameInfoStrike: strike };
+	NSDictionary *strikeInfo = @{ kGameInfoStrike: strike /*, kGameInfoOpponent: @NO*/ };
 	[[NSNotificationCenter defaultCenter] postNotificationName:kGameStrikeNotification
 														object:self
 													  userInfo:strikeInfo];
@@ -159,13 +202,15 @@ collision:
 			// It's a hit!
 			// Calculate the (approximate) time the strike will hit this sun
 			NSTimeInterval strikeTime = self.gameTime+kStrikeAnimationDuration/2*(sunDistance/viewRadius);
-			[self willCaptureSunAtIndex:i gameTime:strikeTime /*localPlayer:YES*/];
+			[self willCaptureSunAtIndex:i gameTime:strikeTime localPlayer:YES];
+			[self sendCaptureForSunIndex:i];
 			}
 		}
 }
 
 - (void)willCaptureSunAtIndex:(NSUInteger)sunIndex
-				gameTime:(NSTimeInterval)gameTime
+                     gameTime:(NSTimeInterval)gameTime
+                  localPlayer:(BOOL)local
 {
 	// Schedule a sun capture in the near future
 	
@@ -183,6 +228,7 @@ collision:
 		// This sun has never been captured by anyone OR the game time of the capture
 		//	is after the game time for this event.
 		sun.time = gameTime;
+		sun.localPlayer = local;
 		
 		// Schedule a timer to start (or update) the sun capture animation, score, etc.
 		NSTimeInterval delay = gameTime-self.gameTime;

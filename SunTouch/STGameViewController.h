@@ -11,7 +11,11 @@
 #import "STGame.h"
 #import "STGameView.h"
 
-@interface STGameViewController : UIViewController
+@interface STGameViewController : UIViewController <UIAlertViewDelegate,
+                                                    GKMatchmakerViewControllerDelegate>
+
+@property (nonatomic) BOOL							twoPlayer;
+@property (nonatomic) UIInterfaceOrientation		lockedOrientation;
 
 @property (strong,nonatomic) IBOutlet	UILabel		*scoreLabel;
 @property (strong,nonatomic) IBOutlet	UILabel		*weightLabel;

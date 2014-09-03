@@ -21,6 +21,7 @@
 @property CGPoint			location;		// location (unit coordinates)
 @property (readonly) BOOL	captured;		// sun has been captured
 @property NSTimeInterval	time;			// game time of capture
+@property BOOL				localPlayer;	// the local player captured this sun
 
 @property (readonly,nonatomic) NSUInteger score;
 

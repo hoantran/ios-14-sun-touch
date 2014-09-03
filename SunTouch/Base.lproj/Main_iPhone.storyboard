@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rQl-PL-IFJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rQl-PL-IFJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -50,6 +50,9 @@
                                 <state key="normal" title="Two Player">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="5oR-Ee-fuh" kind="modal" identifier="twoPlayer" id="Vdb-b8-puG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJr-3Y-67A">
                                 <rect key="frame" x="20" y="526" width="22" height="22"/>
@@ -126,7 +129,7 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Starfield" translatesAutoresizingMaskIntoConstraints="NO" id="irj-gl-Dv3">
-                                <rect key="frame" x="0.0" y="49" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" image="Strike" translatesAutoresizingMaskIntoConstraints="NO" id="UPv-UR-J4p">
@@ -149,15 +152,15 @@
                                 <rect key="frame" x="69" y="324" width="24" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Touch to blast holes in space and uncover suns." translatesAutoresizingMaskIntoConstraints="NO" id="uqe-a4-UcX">
-                                <rect key="frame" x="106" y="131" width="172" height="63"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Touch to blast holes in space and uncover suns." translatesAutoresizingMaskIntoConstraints="NO" id="uqe-a4-UcX">
+                                <rect key="frame" x="106" y="131" width="172" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.48999999999999999" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Collect all eight suns to win. The faster you collect them, the higher your score." translatesAutoresizingMaskIntoConstraints="NO" id="2ST-KL-dGn">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Collect all eight suns to win. The faster you collect them, the higher your score." translatesAutoresizingMaskIntoConstraints="NO" id="2ST-KL-dGn">
                                 <rect key="frame" x="98" y="222" width="196" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.48999999999999999" colorSpace="calibratedWhite"/>
@@ -165,7 +168,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Collect the suns before your opponent does!" translatesAutoresizingMaskIntoConstraints="NO" id="vz5-gG-3og">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Collect the suns before your opponent does!" translatesAutoresizingMaskIntoConstraints="NO" id="vz5-gG-3og">
                                 <rect key="frame" x="106" y="311" width="163" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.48999999999999999" colorSpace="calibratedWhite"/>
@@ -173,7 +176,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Pinch to end game." translatesAutoresizingMaskIntoConstraints="NO" id="7b0-Is-J5g">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Pinch to end game." translatesAutoresizingMaskIntoConstraints="NO" id="7b0-Is-J5g">
                                 <rect key="frame" x="85" y="389" width="136" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.48999999999999999" colorSpace="calibratedWhite"/>
@@ -184,7 +187,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="irj-gl-Dv3" firstAttribute="top" secondItem="so1-mc-xuN" secondAttribute="bottom" constant="24" id="9eL-mx-Zbi"/>
+                            <constraint firstItem="irj-gl-Dv3" firstAttribute="top" secondItem="so1-mc-xuN" secondAttribute="bottom" constant="20" symbolic="YES" id="9eL-mx-Zbi"/>
                             <constraint firstItem="Uua-En-c1t" firstAttribute="top" secondItem="irj-gl-Dv3" secondAttribute="bottom" id="EUA-v7-sUm"/>
                             <constraint firstItem="irj-gl-Dv3" firstAttribute="leading" secondItem="tg4-aq-CMy" secondAttribute="leading" id="Gbn-Ei-NQ8"/>
                             <constraint firstAttribute="trailing" secondItem="irj-gl-Dv3" secondAttribute="trailing" id="TVR-if-lNW"/>
@@ -209,4 +212,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Vdb-b8-puG"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AC25D5918286A5D0018456D /* STOpponentGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC25D5818286A5D0018456D /* STOpponentGameView.m */; };
+		1AC25D5C1828B2D40018456D /* STGame+STDataMessaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC25D5B1828B2D40018456D /* STGame+STDataMessaging.m */; };
 		1ACA686B18232EFC00A247C5 /* STGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA686918232EFC00A247C5 /* STGameViewController.m */; };
 		1ACA686C18232EFC00A247C5 /* STGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA686A18232EFC00A247C5 /* STGameViewController.xib */; };
 		1ACA686F18232F0B00A247C5 /* STGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA686E18232F0B00A247C5 /* STGameView.m */; };
@@ -29,9 +31,8 @@
 		1ACDF3AB1822D11E00B1C381 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACDF3871822D11E00B1C381 /* UIKit.framework */; };
 		1ACDF3B31822D11E00B1C381 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1ACDF3B11822D11E00B1C381 /* InfoPlist.strings */; };
 		1ACDF3B51822D11E00B1C381 /* SunTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACDF3B41822D11E00B1C381 /* SunTouchTests.m */; };
-		3B46B6F019ADB60D001FFBFB /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B46B6EF19ADB60D001FFBFB /* GameKit.framework */; };
-		3B46B6F519B000F1001FFBFB /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3B46B6F419B000F1001FFBFB /* pew-pew-lei.caf */; };
-		3B46B6F719B0038C001FFBFB /* explosion-02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3B46B6F619B0038C001FFBFB /* explosion-02.wav */; };
+		1ACE12DD1826D32C009D5D50 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACE12DC1826D32C009D5D50 /* GameKit.framework */; };
+		3B2F546A19B6A54B00A10A87 /* explosion-02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3B2F546919B6A54B00A10A87 /* explosion-02.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AC25D5718286A5D0018456D /* STOpponentGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOpponentGameView.h; sourceTree = "<group>"; };
+		1AC25D5818286A5D0018456D /* STOpponentGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOpponentGameView.m; sourceTree = "<group>"; };
+		1AC25D5A1828B2D40018456D /* STGame+STDataMessaging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "STGame+STDataMessaging.h"; sourceTree = "<group>"; };
+		1AC25D5B1828B2D40018456D /* STGame+STDataMessaging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "STGame+STDataMessaging.m"; sourceTree = "<group>"; };
 		1ACA686718232EEF00A247C5 /* STGameDefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STGameDefs.h; sourceTree = "<group>"; };
 		1ACA686818232EFC00A247C5 /* STGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STGameViewController.h; sourceTree = "<group>"; };
 		1ACA686918232EFC00A247C5 /* STGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STGameViewController.m; sourceTree = "<group>"; };
@@ -79,9 +84,8 @@
 		1ACDF3B01822D11E00B1C381 /* SunTouchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SunTouchTests-Info.plist"; sourceTree = "<group>"; };
 		1ACDF3B21822D11E00B1C381 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1ACDF3B41822D11E00B1C381 /* SunTouchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SunTouchTests.m; sourceTree = "<group>"; };
-		3B46B6EF19ADB60D001FFBFB /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		3B46B6F419B000F1001FFBFB /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pew-pew-lei.caf"; path = "rsc/pew-pew-lei.caf"; sourceTree = "<group>"; };
-		3B46B6F619B0038C001FFBFB /* explosion-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "explosion-02.wav"; path = "rsc/explosion-02.wav"; sourceTree = "<group>"; };
+		1ACE12DC1826D32C009D5D50 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		3B2F546919B6A54B00A10A87 /* explosion-02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "explosion-02.wav"; path = "src/explosion-02.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +96,7 @@
 				1ACDF3861822D11E00B1C381 /* CoreGraphics.framework in Frameworks */,
 				1ACDF3881822D11E00B1C381 /* UIKit.framework in Frameworks */,
 				1ACDF3841822D11E00B1C381 /* Foundation.framework in Frameworks */,
-				3B46B6F019ADB60D001FFBFB /* GameKit.framework in Frameworks */,
+				1ACE12DD1826D32C009D5D50 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +135,7 @@
 		1ACDF3821822D11E00B1C381 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3B46B6EF19ADB60D001FFBFB /* GameKit.framework */,
+				1ACE12DC1826D32C009D5D50 /* GameKit.framework */,
 				1ACDF3831822D11E00B1C381 /* Foundation.framework */,
 				1ACDF3851822D11E00B1C381 /* CoreGraphics.framework */,
 				1ACDF3871822D11E00B1C381 /* UIKit.framework */,
@@ -143,8 +147,7 @@
 		1ACDF3891822D11E00B1C381 /* SunTouch */ = {
 			isa = PBXGroup;
 			children = (
-				3B46B6F619B0038C001FFBFB /* explosion-02.wav */,
-				3B46B6F419B000F1001FFBFB /* pew-pew-lei.caf */,
+				3B2F546919B6A54B00A10A87 /* explosion-02.wav */,
 				1ACA686718232EEF00A247C5 /* STGameDefs.h */,
 				1ACDF3921822D11E00B1C381 /* STAppDelegate.h */,
 				1ACDF3931822D11E00B1C381 /* STAppDelegate.m */,
@@ -159,8 +162,12 @@
 				1ACA686A18232EFC00A247C5 /* STGameViewController.xib */,
 				1ACA686D18232F0B00A247C5 /* STGameView.h */,
 				1ACA686E18232F0B00A247C5 /* STGameView.m */,
+				1AC25D5718286A5D0018456D /* STOpponentGameView.h */,
+				1AC25D5818286A5D0018456D /* STOpponentGameView.m */,
 				1ACA687618232F2000A247C5 /* STGame.h */,
 				1ACA687718232F2000A247C5 /* STGame.m */,
+				1AC25D5A1828B2D40018456D /* STGame+STDataMessaging.h */,
+				1AC25D5B1828B2D40018456D /* STGame+STDataMessaging.m */,
 				1ACA687018232F1900A247C5 /* STStrike.h */,
 				1ACA687118232F1900A247C5 /* STStrike.m */,
 				1ACA687218232F1900A247C5 /* STSun.h */,
@@ -287,11 +294,10 @@
 			files = (
 				1ACDF39A1822D11E00B1C381 /* Main_iPad.storyboard in Resources */,
 				1ACDF3A21822D11E00B1C381 /* Images.xcassets in Resources */,
+				3B2F546A19B6A54B00A10A87 /* explosion-02.wav in Resources */,
 				1ACDF3971822D11E00B1C381 /* Main_iPhone.storyboard in Resources */,
 				1ACDF38E1822D11E00B1C381 /* InfoPlist.strings in Resources */,
 				1ACA686C18232EFC00A247C5 /* STGameViewController.xib in Resources */,
-				3B46B6F519B000F1001FFBFB /* pew-pew-lei.caf in Resources */,
-				3B46B6F719B0038C001FFBFB /* explosion-02.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,10 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AC25D5C1828B2D40018456D /* STGame+STDataMessaging.m in Sources */,
 				1ACA686B18232EFC00A247C5 /* STGameViewController.m in Sources */,
 				1ACA686F18232F0B00A247C5 /* STGameView.m in Sources */,
 				1ACA687418232F1900A247C5 /* STStrike.m in Sources */,
 				1ACDF3901822D11E00B1C381 /* main.m in Sources */,
+				1AC25D5918286A5D0018456D /* STOpponentGameView.m in Sources */,
 				1ACDF39D1822D11E00B1C381 /* STMainViewController.m in Sources */,
 				1ACDF3941822D11E00B1C381 /* STAppDelegate.m in Sources */,
 				1ACDF3A01822D11E00B1C381 /* STFlipsideViewController.m in Sources */,
@@ -455,13 +463,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hoan Tran (2473KE85XF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hoan Tran (2473KE85XF)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SunTouch/SunTouch-Prefix.pch";
 				INFOPLIST_FILE = "SunTouch/SunTouch-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "ac655cb9-e90e-4c90-a357-c418ff422b38";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -471,13 +479,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hoan Tran (2473KE85XF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hoan Tran (2473KE85XF)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SunTouch/SunTouch-Prefix.pch";
 				INFOPLIST_FILE = "SunTouch/SunTouch-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "ac655cb9-e90e-4c90-a357-c418ff422b38";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
